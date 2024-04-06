@@ -23,6 +23,9 @@ substitutions:
   clack_wifi_signal_db_percent: WiFi Signaal
   clack_uptime: Uptime
   clack_chlorinator: Chlorinator
+  clack_select_salt_measurement: Zout niveau meting
+  clack_measure_always: Altijd
+  clack_measure_during_brine: Alleen na bezouting
   hours: uur
   days: dagen
   clack_yes: ja
@@ -33,11 +36,12 @@ substitutions:
   clack_current: Stroom
   clack_voltage: Spanning
   clack_shunt_voltage: Shunt spanning
+  clack_restart: ESP Herstart
 
 text_sensor:
   # Expose last regeneration information as sensor
   - platform: template
-    name: ${clack_regeneration_last}
+    name: ${name} ${clack_regeneration_last}
     id: clack_regeneration_last
     icon: mdi:clock-start
     update_interval: never
